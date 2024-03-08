@@ -19,4 +19,4 @@ import { Task } from './tasks/task.entity';
     }),
   ],
 })
-export class AppModule {}
+export class AppModule { }
