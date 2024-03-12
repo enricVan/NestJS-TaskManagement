@@ -1,3 +1,4 @@
+import { Transform } from 'class-transformer';
 import { IsNotEmpty } from 'class-validator';
 
 export class CreateTaskDto {
@@ -5,5 +6,6 @@ export class CreateTaskDto {
   title: string;
 
   @IsNotEmpty()
+  @Transform(({ value }) => value.trim())
   description: string;
 }
